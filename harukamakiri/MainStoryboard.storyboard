@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vzW-Xc-Cxt">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
+    </dependencies>
+    <scenes>
+        <!--Haru Kamakiri View Controller-->
+        <scene sceneID="Nzz-eB-l23">
+            <objects>
+                <viewController id="vzW-Xc-Cxt" customClass="HaruKamakiriViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKb-fg-f4a">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="186" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-hL-lXf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TweetCell" rowHeight="186" id="MA8-If-UdS">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="186"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Cg1-Rj-Mqb">
+                                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" type="user" id="7sU-rr-ieh"/>
+                                                        <constraint firstAttribute="width" constant="40" type="user" id="vjg-ap-Dww"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" restorationIdentifier="nameLabel" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="KUP-yG-cqS">
+                                                    <rect key="frame" x="60" y="10" width="242" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" type="user" id="62Q-VQ-CH7"/>
+                                                        <constraint firstAttribute="width" constant="242" id="akf-qT-bcO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="top" text="tweet" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-yG-DWl">
+                                                    <rect key="frame" x="60" y="36" width="250" height="135"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" type="user" id="ZYu-VD-VuY"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" type="user" id="ouA-RZ-7Ay"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="V2m-yG-DWl" secondAttribute="bottom" constant="15" type="user" id="B2V-vH-JMR"/>
+                                            <constraint firstItem="V2m-yG-DWl" firstAttribute="leading" secondItem="KUP-yG-cqS" secondAttribute="leading" type="user" id="C3J-2u-Sn9"/>
+                                            <constraint firstItem="V2m-yG-DWl" firstAttribute="top" secondItem="KUP-yG-cqS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KNK-LJ-4KY"/>
+                                            <constraint firstAttribute="trailing" secondItem="V2m-yG-DWl" secondAttribute="trailing" constant="10" type="user" id="PWO-Ks-5Et"/>
+                                            <constraint firstItem="KUP-yG-cqS" firstAttribute="leading" secondItem="MA8-If-UdS" secondAttribute="leading" constant="60" type="user" id="aAF-c3-Uoq"/>
+                                            <constraint firstItem="Cg1-Rj-Mqb" firstAttribute="top" secondItem="MA8-If-UdS" secondAttribute="top" constant="10" type="user" id="ejZ-Tu-opO"/>
+                                            <constraint firstItem="KUP-yG-cqS" firstAttribute="top" secondItem="Cg1-Rj-Mqb" secondAttribute="top" type="default" id="hoj-Ya-vwV"/>
+                                            <constraint firstItem="Cg1-Rj-Mqb" firstAttribute="leading" secondItem="MA8-If-UdS" secondAttribute="leading" constant="10" type="user" id="tL7-ab-EvD"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vzW-Xc-Cxt" id="ba5-6b-fha"/>
+                                    <outlet property="delegate" destination="vzW-Xc-Cxt" id="nRl-nv-jSL"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcD-FE-6je">
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lem-t7-We5"/>
+                                    <barButtonItem systemItem="refresh" id="dIX-fa-x2F">
+                                        <connections>
+                                            <action selector="RefreshTL:" destination="vzW-Xc-Cxt" id="dN4-09-Ip3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="v0W-zY-XqG"/>
+                                    <barButtonItem systemItem="compose" id="o9S-8g-YeR">
+                                        <connections>
+                                            <action selector="TweetTL:" destination="vzW-Xc-Cxt" id="Exj-Cv-j23"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fs3-7D-0Cz"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcD-FE-6je" firstAttribute="trailing" secondItem="LKb-fg-f4a" secondAttribute="trailing" type="default" id="Fzy-r3-iFL"/>
+                            <constraint firstItem="2D3-hL-lXf" firstAttribute="leading" secondItem="LKb-fg-f4a" secondAttribute="leading" type="default" id="GgO-LW-gke"/>
+                            <constraint firstItem="2D3-hL-lXf" firstAttribute="trailing" secondItem="LKb-fg-f4a" secondAttribute="trailing" type="default" id="Jv6-vx-dFv"/>
+                            <constraint firstItem="hcD-FE-6je" firstAttribute="bottom" secondItem="LKb-fg-f4a" secondAttribute="bottom" type="default" id="LGN-di-ob8"/>
+                            <constraint firstItem="hcD-FE-6je" firstAttribute="leading" secondItem="LKb-fg-f4a" secondAttribute="leading" type="default" id="MTI-cs-doe"/>
+                            <constraint firstItem="2D3-hL-lXf" firstAttribute="top" secondItem="LKb-fg-f4a" secondAttribute="top" type="default" id="kf5-fy-fBu"/>
+                            <constraint firstItem="2D3-hL-lXf" firstAttribute="bottom" secondItem="hcD-FE-6je" secondAttribute="top" type="default" id="s1f-qm-dhv"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="_tableView" destination="2D3-hL-lXf" id="zIW-Qu-pC3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fiZ-FW-p4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="-108"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="HaruKamakiriViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HaruKamakiriViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="RefreshTL:"/>
+                <relationship kind="action" name="TweetTL:"/>
+                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
